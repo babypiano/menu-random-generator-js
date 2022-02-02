@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="¿Qué hago de comer? Es un sitio que te ayudara a decidir qué hacer de comer. La sugerencia que se muestra es tomada de una lista de guisados de platillos típicos, por lo general muy cotidianos y que se cocinan en la mayoría de los hogares mexicanos.">
+    <title>¿Que hago de Comer?</title>
+    <link rel="stylesheet" href="css/estilos.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header> 
+    </header>
+    <section>
+        <div class="banner">
+            <div class="sombra">
+                <h1>¿Que hago de Comer?</h1>
+                <p>¿No sabes que hacer de comer? Te puedo ayudar dandote algunas sugerencias 😉<br>
+                    Presiona el boton para darte alguna sugerencia de la lista del menú. 😋🤤<br>
+                    🍳🔪🍴🍲🥑🍅🥚🧂🌮🍕😋🤤🍴
+                </p>
+            
+                <button type="button" onclick="listaMenu()" class="btn-red btn btn-danger">¿Que hago de Comer?</button><br><br>
+                <div class="alert alert-success" role="alert">
+                    <h4 id="comidas"> Nuestra sugerencia para hoy de la lista del menú es...</h4>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer class="footer">
+            <small>2022 Todos los derechos reservados. <br>Diseñado por Vaquita Gorda Studios.</small>
+        </footer>
+    </section>
+ 
+    <script>
+        function listaMenu(){
+            let menu = ['Enchiladas verdes', 'Pollo en achiote', 'Caldo de Pollo', 'Birria de res', 'Tortitas de carne', 'Tacos dorados', 'Chilacayotes en mole', 'Pechuga asada','Cochinita pibil', 'Filete de pescado', 'Chiles rellenos', 'Si es fin de semana ¡pide una Pizza!','Frijoles Charros', 'Tostadas tinga', 'Tostadas pata', 'Albondigas', 'Bisteces encebollados con Rajas en Crema', 'Chilaquiles con Pechuga', 'Croquetas de Papa y atun', 'Milaneza de pollo', 'Chicharron en salsa de Jitomate y Frijoles'];
+            let RandomElem = menu[Math.floor(Math.random() * menu.length)];
+            document.getElementById("comidas").innerHTML = RandomElem;
+        }
+    </script>
+</body>
+</html>
